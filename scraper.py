@@ -1,5 +1,5 @@
 import requests
-import panda as pd
+import pandas as pd
 from bs4 import BeautifulSoup
 
 url = 'https://realpython.github.io/fake-jobs/'
@@ -23,3 +23,4 @@ for result in results:
 
 df = pd.DataFrame(jobData)
 print(df)
+df.to_csv(r'/Users/david/Documents/data_analyst/Python-Job-Listing-Scraper/job_listings.csv', index=False)
